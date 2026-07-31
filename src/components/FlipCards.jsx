@@ -10,42 +10,48 @@ export default function FlipCards() {
       id: 1,
       title: 'Your Kindness',
       icon: Heart,
-      color: 'text-dustypink-300',
+      color: 'text-pink-300',
+      borderColor: 'border-pink-400/30',
       message: 'The way you treat everyone with warmth and pure empathy makes my heart overflow every day.',
     },
     {
       id: 2,
       title: 'Your Radiant Smile',
       icon: Sun,
-      color: 'text-sage-300',
+      color: 'text-purple-300',
+      borderColor: 'border-purple-400/30',
       message: 'Whenever you smile, the room lights up. It instantly cures my hardest days.',
     },
     {
       id: 3,
       title: 'Unfiltered Laughter',
       icon: Smile,
-      color: 'text-lavender-300',
+      color: 'text-emerald-300',
+      borderColor: 'border-emerald-400/30',
       message: 'Our inside jokes and the sound of your genuine laugh are my absolute favorite sounds.',
     },
     {
       id: 4,
       title: 'My Safe Haven',
       icon: ShieldCheck,
-      color: 'text-dustypink-300',
+      color: 'text-pink-300',
+      borderColor: 'border-pink-400/30',
       message: 'Being with you feels like home—a place of total comfort, peace, and acceptance.',
     },
     {
       id: 5,
       title: 'Endless Adventures',
       icon: Compass,
-      color: 'text-sage-300',
+      color: 'text-purple-300',
+      borderColor: 'border-purple-400/30',
       message: 'From quiet coffee dates to spontaneous road trips, every moment with you is an adventure.',
     },
     {
       id: 6,
       title: 'Gentle Soul',
       icon: Feather,
-      color: 'text-lavender-300',
+      color: 'text-emerald-300',
+      borderColor: 'border-emerald-400/30',
       message: 'Your quiet strength and gentle wisdom guide us through everything seamlessly.',
     },
   ];
@@ -60,16 +66,13 @@ export default function FlipCards() {
   return (
     <section className="relative z-10 w-full max-w-5xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <span className="glass-pill px-3 py-1 rounded-full text-xs text-lavender-300 tracking-wider uppercase inline-flex items-center gap-1.5 border border-lavender-300/20">
-          <Star className="w-3 h-3 text-lavender-300" />
+        <span className="glass-pill px-3.5 py-1 rounded-full text-xs text-purple-200 tracking-wider uppercase inline-flex items-center gap-1.5 border border-purple-400/30">
+          <Star className="w-3.5 h-3.5 text-purple-300 fill-purple-300" />
           Click Cards To Reveal
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif text-slate-100 mt-2 font-normal">
           Reasons Why I Love You
         </h2>
-        <p className="text-slate-400 text-xs sm:text-sm font-light mt-1">
-          A few of the endless reasons you mean the world to me.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -93,7 +96,7 @@ export default function FlipCards() {
                 }`}
               >
                 {/* Front Side */}
-                <div className="absolute inset-0 w-full h-full glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-white/10 group-hover:border-white/20 backface-hidden shadow-lg">
+                <div className="absolute inset-0 w-full h-full glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-white/10 group-hover:border-purple-300/30 backface-hidden shadow-lg">
                   <div className={`p-3.5 rounded-2xl bg-white/5 border border-white/10 mb-3 ${reason.color}`}>
                     <Icon className="w-6 h-6 stroke-[1.5]" />
                   </div>
@@ -106,7 +109,7 @@ export default function FlipCards() {
                 </div>
 
                 {/* Back Side */}
-                <div className="absolute inset-0 w-full h-full glass-card bg-slate-900/80 rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-dustypink-300/30 rotate-y-180 backface-hidden shadow-xl">
+                <div className={`absolute inset-0 w-full h-full glass-card bg-slate-900/90 rounded-2xl p-6 flex flex-col items-center justify-center text-center border ${reason.borderColor} rotate-y-180 backface-hidden shadow-xl`}>
                   <Sparkles className={`w-4 h-4 mb-2 ${reason.color}`} />
                   <p className="text-sm font-light text-slate-200 leading-relaxed font-serif">
                     "{reason.message}"
@@ -123,3 +126,4 @@ export default function FlipCards() {
     </section>
   );
 }
+

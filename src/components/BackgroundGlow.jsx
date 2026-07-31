@@ -3,17 +3,22 @@ import React from 'react';
 export default function BackgroundGlow() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Soft Sage Green Blob */}
+      {/* Soft Pink Ambient Glow Blob */}
       <div 
-        className="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-sage-400/20 blur-[130px] animate-blob-1"
+        className="absolute -top-[12%] -left-[10%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-pink-500/22 blur-[140px] animate-blob-1"
       />
-      {/* Muted Lavender Purple Blob */}
+      {/* Vibrant Purple Ambient Glow Blob */}
       <div 
-        className="absolute top-[35%] -right-[15%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-lavender-400/18 blur-[140px] animate-blob-2"
+        className="absolute top-[30%] -right-[12%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-purple-500/22 blur-[140px] animate-blob-2"
       />
-      {/* Dusty Soft Pink Blob */}
+      {/* Fresh Emerald Green Ambient Glow Blob */}
       <div 
-        className="absolute -bottom-[10%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-dustypink-400/20 blur-[130px] animate-blob-1"
+        className="absolute -bottom-[12%] left-[15%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-emerald-400/20 blur-[140px] animate-blob-3"
+      />
+      {/* Center Tri-Color Blend Mesh */}
+      <div 
+        className="absolute top-[20%] left-[25%] w-[45vw] h-[45vw] max-w-[500px] max-h-[500px] rounded-full bg-gradient-to-tr from-pink-500/10 via-purple-500/10 to-emerald-400/10 blur-[120px] animate-pulse"
+        style={{ animationDuration: '8s' }}
       />
       {/* Subtle Noise Texture Overlay */}
       <div 
@@ -25,3 +30,4 @@ export default function BackgroundGlow() {
     </div>
   );
 }
+

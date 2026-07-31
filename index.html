@@ -1,883 +1,971 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Girlfriend's Day Digital Love Letter</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>" />
-  
-  <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Girlfriend's Day Digital Love Letter</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>"
+    />
 
-  <!-- Tailwind Configuration -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            sage: {
-              100: '#e1ede5',
-              200: '#c5dccf',
-              300: '#a7c4b0',
-              400: '#8cae98',
-              500: '#55876f',
-              900: '#1b2a23',
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              sage: {
+                100: "#e1ede5",
+                200: "#c5dccf",
+                300: "#a7c4b0",
+                400: "#8cae98",
+                500: "#55876f",
+                900: "#1b2a23",
+              },
+              lavender: {
+                100: "#efebf6",
+                200: "#e0d8ed",
+                300: "#b8a9c9",
+                400: "#9e8fb2",
+                500: "#7a5e8c",
+                900: "#271c2d",
+              },
+              dustypink: {
+                100: "#faeaec",
+                200: "#f6d8dc",
+                300: "#e8b4b4",
+                400: "#d49a9a",
+                500: "#be4e64",
+                900: "#3e161f",
+              },
+              darkbg: "#0c100e",
             },
-            lavender: {
-              100: '#efebf6',
-              200: '#e0d8ed',
-              300: '#b8a9c9',
-              400: '#9e8fb2',
-              500: '#7a5e8c',
-              900: '#271c2d',
+            fontFamily: {
+              serif: ['"Playfair Display"', "Georgia", "serif"],
+              sans: ['"Inter"', "system-ui", "sans-serif"],
             },
-            dustypink: {
-              100: '#faeaec',
-              200: '#f6d8dc',
-              300: '#e8b4b4',
-              400: '#d49a9a',
-              500: '#be4e64',
-              900: '#3e161f',
-            },
-            darkbg: '#0c100e',
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Inter"', 'system-ui', 'sans-serif'],
           },
         },
-      },
-    }
-  </script>
+      };
+    </script>
 
-  <!-- Custom Styles: Glassmorphism & 3D Mechanics -->
-  <style>
-    body {
-      background-color: #0c100e;
-      color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
+    <!-- Custom Styles: Glassmorphism & 3D Mechanics -->
+    <style>
+      body {
+        background-color: #0b0d10;
+        color: #e2e8f0;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
 
-    h1, h2, h3, h4, .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
 
-    /* Glassmorphism Classes */
-    .glass-panel {
-      background: rgba(18, 24, 21, 0.6);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    }
+      /* 🎨 Tri-Color Pink-Purple-Green Blend Utilities */
+      .text-tri-gradient {
+        background: linear-gradient(
+          135deg,
+          #f472b6 0%,
+          #c084fc 50%,
+          #34d399 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-    .glass-card {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      .glow-tri {
+        box-shadow:
+          0 0 30px rgba(244, 114, 182, 0.35),
+          0 0 60px rgba(192, 132, 252, 0.25),
+          0 0 90px rgba(52, 211, 153, 0.25);
+      }
 
-    .glass-card-hover:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(232, 180, 180, 0.3);
-      box-shadow: 0 10px 30px -5px rgba(232, 180, 180, 0.15);
-      transform: translateY(-3px);
-    }
+      /* Glassmorphism Classes */
+      .glass-panel {
+        background: rgba(18, 20, 24, 0.65);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+      }
 
-    .glass-pill {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
 
-    .glass-button {
-      background: linear-gradient(135deg, rgba(167, 196, 176, 0.25) 0%, rgba(232, 180, 180, 0.25) 100%);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
+      .glass-card-hover:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(192, 132, 252, 0.4);
+        box-shadow:
+          0 10px 30px -5px rgba(244, 114, 182, 0.2),
+          0 0 20px rgba(52, 211, 153, 0.15);
+        transform: translateY(-3px);
+      }
 
-    .glass-button:hover {
-      background: linear-gradient(135deg, rgba(167, 196, 176, 0.4) 0%, rgba(232, 180, 180, 0.4) 100%);
-      border-color: rgba(255, 255, 255, 0.4);
-      box-shadow: 0 6px 20px rgba(184, 169, 201, 0.3);
-    }
+      .glass-pill {
+        background: linear-gradient(
+          135deg,
+          rgba(244, 114, 182, 0.1) 0%,
+          rgba(192, 132, 252, 0.1) 50%,
+          rgba(52, 211, 153, 0.1) 100%
+        );
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
 
-    /* 3D Flip Mechanics */
-    .perspective-1000 {
-      perspective: 1000px;
-    }
+      .glass-button {
+        background: linear-gradient(
+          135deg,
+          rgba(244, 114, 182, 0.25) 0%,
+          rgba(192, 132, 252, 0.25) 50%,
+          rgba(52, 211, 153, 0.25) 100%
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+      }
 
-    .transform-style-3d {
-      transform-style: preserve-3d;
-    }
+      .glass-button:hover {
+        background: linear-gradient(
+          135deg,
+          rgba(244, 114, 182, 0.4) 0%,
+          rgba(192, 132, 252, 0.4) 50%,
+          rgba(52, 211, 153, 0.4) 100%
+        );
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 6px 25px rgba(192, 132, 252, 0.35);
+      }
 
-    .backface-hidden {
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
+      /* 3D Flip Mechanics */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
 
-    .rotate-y-180 {
-      transform: rotateY(180deg);
-    }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+      }
 
-    /* Shake Animation for Incorrect PIN */
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      15%, 45%, 75% { transform: translateX(-10px); }
-      30%, 60%, 90% { transform: translateX(10px); }
-    }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
 
-    .animate-shake {
-      animation: shake 0.5s ease-in-out;
-    }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
 
-    /* Floating Ambient Gradient Blobs */
-    @keyframes blob-float-1 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(40px, -50px) scale(1.1); }
-      66% { transform: translate(-30px, 30px) scale(0.95); }
-    }
+      /* Shake Animation for Incorrect PIN */
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        15%,
+        45%,
+        75% {
+          transform: translateX(-10px);
+        }
+        30%,
+        60%,
+        90% {
+          transform: translateX(10px);
+        }
+      }
 
-    @keyframes blob-float-2 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(-40px, 50px) scale(1.08); }
-      66% { transform: translate(30px, -20px) scale(0.9); }
-    }
+      .animate-shake {
+        animation: shake 0.5s ease-in-out;
+      }
 
-    .animate-blob-1 { animation: blob-float-1 20s ease-in-out infinite; }
-    .animate-blob-2 { animation: blob-float-2 24s ease-in-out infinite; }
+      /* Floating Ambient Gradient Blobs */
+      @keyframes blob-float-1 {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(50px, -70px) scale(1.15);
+        }
+        66% {
+          transform: translate(-40px, 30px) scale(0.92);
+        }
+      }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0c100e; }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(184, 169, 201, 0.2);
-      border-radius: 9999px;
-      border: 2px solid #0c100e;
-    }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(232, 180, 180, 0.4); }
-  </style>
-</head>
-<body class="relative min-h-screen text-slate-100 selection:bg-dustypink-300/30 selection:text-dustypink-100">
+      @keyframes blob-float-2 {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(-60px, 50px) scale(1.1);
+        }
+        66% {
+          transform: translate(40px, -40px) scale(0.88);
+        }
+      }
 
-  <!-- Ambient Glowing Background Blobs -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-sage-300/15 blur-[130px] animate-blob-1"></div>
-    <div class="absolute top-[35%] -right-[15%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-lavender-300/15 blur-[140px] animate-blob-2"></div>
-    <div class="absolute -bottom-[10%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-dustypink-300/15 blur-[130px] animate-blob-1"></div>
-  </div>
+      .animate-blob-1 {
+        animation: blob-float-1 20s ease-in-out infinite;
+      }
+      .animate-blob-2 {
+        animation: blob-float-2 24s ease-in-out infinite;
+      }
 
-  <!-- ========================================== -->
-  <!-- 🔒 FEATURE 1: SECRET LOCK SCREEN OVERLAY -->
-  <!-- ========================================== -->
-  <div id="lock-screen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkbg/95 backdrop-blur-2xl transition-all duration-700">
-    <div id="lock-card" class="w-full max-w-md glass-panel rounded-3xl p-8 sm:p-10 flex flex-col items-center border border-white/10 shadow-2xl relative z-10">
-      
-      <!-- Lock Icon -->
-      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-sage-300/20 via-lavender-300/20 to-dustypink-300/20 flex items-center justify-center border border-white/20 mb-6 shadow-inner">
-        <i data-lucide="lock" class="w-8 h-8 text-dustypink-300 stroke-[1.5]"></i>
-      </div>
-
-      <!-- Lock Header -->
-      <h2 class="text-3xl sm:text-4xl font-serif text-center font-normal tracking-wide text-slate-100 mb-1">
-        Love Letter Vault
-      </h2>
-      <p class="text-slate-400 text-xs tracking-wider uppercase mb-8 font-light">
-        Enter Passcode To Unlock Message
-      </p>
-
-      <!-- 6 PIN Indicators -->
-      <div class="flex gap-3 mb-6" id="pin-dots">
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-        <div class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"></div>
-      </div>
-
-      <!-- Error Message Feedback -->
-      <div id="error-message" class="hidden items-center gap-1.5 text-dustypink-300 text-xs mb-4">
-        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
-        <span>Incorrect Passcode. Try again!</span>
-      </div>
-
-      <!-- Keypad Grid -->
-      <div class="grid grid-cols-3 gap-3 w-full max-w-[280px] mb-6">
-        <button onclick="pressNum('1')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">1</button>
-        <button onclick="pressNum('2')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">2</button>
-        <button onclick="pressNum('3')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">3</button>
-        <button onclick="pressNum('4')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">4</button>
-        <button onclick="pressNum('5')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">5</button>
-        <button onclick="pressNum('6')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">6</button>
-        <button onclick="pressNum('7')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">7</button>
-        <button onclick="pressNum('8')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">8</button>
-        <button onclick="pressNum('9')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">9</button>
-        
-        <button onclick="toggleHint()" class="h-14 rounded-2xl glass-card text-slate-400 hover:text-lavender-300 hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center" title="Hint">
-          <i data-lucide="help-circle" class="w-5 h-5 stroke-[1.5]"></i>
-        </button>
-        <button onclick="pressNum('0')" class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all">0</button>
-        <button onclick="deleteNum()" class="h-14 rounded-2xl glass-card text-slate-400 hover:text-dustypink-300 hover:bg-white/10 active:scale-95 transition-all text-xs font-mono uppercase">Delete</button>
-      </div>
-
-      <!-- Hint Box Accordion -->
-      <div id="hint-box" class="hidden w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-center text-xs text-slate-300 mb-4 transition-all">
-        <p class="flex items-center justify-center gap-1.5 text-lavender-300 mb-1 font-medium">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-          <span>Vault Hint</span>
-        </p>
-        <p id="hint-text" class="text-slate-400 font-light mb-2"></p>
-        <button onclick="quickUnlock()" class="text-[11px] underline text-sage-300 hover:text-sage-200">Click for Auto Unlock</button>
-      </div>
-
-      <button onclick="quickUnlock()" class="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1.5 transition-colors pt-2">
-        <i data-lucide="unlock" class="w-3.5 h-3.5"></i>
-        <span>Quick Unlock Access</span>
-      </button>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0d10;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          180deg,
+          rgba(244, 114, 182, 0.4) 0%,
+          rgba(192, 132, 252, 0.4) 50%,
+          rgba(52, 211, 153, 0.4) 100%
+        );
+        border-radius: 9999px;
+        border: 2px solid #0b0d10;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(244, 114, 182, 0.7) 0%,
+          rgba(192, 132, 252, 0.7) 50%,
+          rgba(52, 211, 153, 0.7) 100%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="relative min-h-screen text-slate-100 selection:bg-pink-500/30 selection:text-pink-100"
+  >
+    <!-- Ambient Glowing Background Blobs -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute -top-[12%] -left-[10%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-pink-500/22 blur-[140px] animate-blob-1"
+      ></div>
+      <div
+        class="absolute top-[30%] -right-[12%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-purple-500/22 blur-[140px] animate-blob-2"
+      ></div>
+      <div
+        class="absolute -bottom-[12%] left-[15%] w-[55vw] h-[55vw] max-w-[650px] max-h-[650px] rounded-full bg-emerald-400/20 blur-[140px] animate-blob-1"
+      ></div>
     </div>
-  </div>
 
-  <!-- ========================================== -->
-  <!-- 💌 MAIN WEBSITE CONTENT CONTAINER -->
-  <!-- ========================================== -->
-  <div id="main-content" class="relative z-10 max-w-5xl mx-auto px-4 py-8 opacity-0 scale-95 transition-all duration-1000 pointer-events-none pb-28">
-    
-    <!-- 1. HEADER SECTION -->
-    <header class="flex flex-col items-center text-center pt-8 pb-10">
-      <div class="glass-pill px-4 py-1.5 rounded-full flex items-center gap-2 mb-6 border border-white/10">
-        <span class="w-2 h-2 rounded-full bg-dustypink-300 animate-ping"></span>
-        <span class="text-xs uppercase tracking-widest text-slate-300 font-medium">Girlfriend's Day Edition</span>
+    <!-- ========================================== -->
+    <!-- 🔒 FEATURE 1: SECRET LOCK SCREEN OVERLAY -->
+    <!-- ========================================== -->
+    <div
+      id="lock-screen"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkbg/95 backdrop-blur-2xl transition-all duration-700 overflow-hidden"
+    >
+      <!-- Rich Background Decorative Orbit Rings & Glowing Orbs -->
+      <div
+        class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
+      >
+        <div
+          class="w-[640px] h-[640px] rounded-full border border-dashed border-pink-400/20 animate-spin"
+          style="animation-duration: 40s"
+        ></div>
+        <div
+          class="absolute w-[500px] h-[500px] rounded-full border border-purple-400/25 animate-spin"
+          style="animation-duration: 30s; animation-direction: reverse"
+        ></div>
+        <div
+          class="absolute w-[360px] h-[360px] rounded-full border border-dashed border-emerald-400/20 animate-spin"
+          style="animation-duration: 20s"
+        ></div>
+        <div
+          class="absolute w-[240px] h-[240px] rounded-full border border-pink-300/20 animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute top-12 left-12 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-blob-1"
+        ></div>
+        <div
+          class="absolute bottom-12 right-12 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-blob-2"
+        ></div>
       </div>
 
-      <h1 id="header-title" class="text-4xl sm:text-6xl md:text-7xl font-serif text-slate-100 font-normal tracking-tight leading-tight mb-4">
-        For My Dearest
-      </h1>
+      <div
+        id="lock-card"
+        class="w-full max-w-md glass-panel rounded-3xl p-8 sm:p-10 flex flex-col items-center border border-white/20 shadow-2xl relative z-10 glow-tri overflow-hidden"
+      >
+        <!-- Top Decorative Glowing Bar -->
+        <div
+          class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-emerald-400"
+        ></div>
 
-      <p class="text-slate-400 font-light text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-6">
-        A digital sanctuary celebrating our story, timeless memories, and every single second we spend side by side.
-      </p>
-
-      <button onclick="relockVault()" class="glass-card px-3.5 py-2 rounded-xl text-xs text-slate-300 hover:text-white flex items-center gap-2 transition-all hover:bg-white/10">
-        <i data-lucide="lock" class="w-3.5 h-3.5 text-dustypink-300 stroke-[1.5]"></i>
-        <span>Lock Vault</span>
-      </button>
-    </header>
-
-    <!-- 2. LIVE RELATIONSHIP TIMER SECTION -->
-    <section class="mb-12">
-      <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl relative overflow-hidden">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
-          <div class="flex items-center gap-2.5">
-            <div class="p-2 rounded-xl bg-sage-300/15 border border-sage-300/20 text-sage-300">
-              <i data-lucide="clock" class="w-4 h-4 stroke-[1.5]"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-serif text-slate-100 font-medium tracking-wide">Time Spent Together</h3>
-              <p id="counter-start-label" class="text-xs text-slate-400 font-light">Counting every heartbeat since July 15, 2025</p>
-            </div>
-          </div>
-          <div class="glass-pill px-3 py-1 rounded-full text-xs text-dustypink-300 flex items-center gap-1.5 border border-dustypink-300/20">
-            <i data-lucide="sparkles" class="w-3 h-3"></i>
-            <span id="total-days-label">0 Total Days of Love</span>
-          </div>
+        <!-- Top Security Badge -->
+        <div
+          class="glass-pill px-3.5 py-1 rounded-full flex items-center gap-1.5 mb-6 border border-pink-400/30 shadow-md"
+        >
+          <i
+            data-lucide="sparkles"
+            class="w-3.5 h-3.5 text-pink-300 animate-pulse"
+          ></i>
+          <span
+            class="text-[10px] uppercase tracking-widest text-pink-200 font-medium"
+            >Secret Love Vault</span
+          >
         </div>
 
-        <!-- Timer Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-            <span id="timer-days" class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-1">00</span>
-            <span class="text-[11px] uppercase tracking-widest text-slate-400 font-medium">Days</span>
-          </div>
-          <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-            <span id="timer-hours" class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-1">00</span>
-            <span class="text-[11px] uppercase tracking-widest text-slate-400 font-medium">Hours</span>
-          </div>
-          <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-            <span id="timer-minutes" class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-1">00</span>
-            <span class="text-[11px] uppercase tracking-widest text-slate-400 font-medium">Minutes</span>
-          </div>
-          <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-            <span id="timer-seconds" class="text-3xl sm:text-4xl font-serif font-bold text-slate-100 mb-1">00</span>
-            <span class="text-[11px] uppercase tracking-widest text-slate-400 font-medium">Seconds</span>
-          </div>
+        <!-- Lock Icon -->
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500/30 via-purple-500/30 to-emerald-400/30 flex items-center justify-center border border-white/30 mb-5 shadow-inner glow-pink relative"
+        >
+          <i data-lucide="lock" class="w-8 h-8 text-pink-200 stroke-[1.5]"></i>
         </div>
-      </div>
-    </section>
 
-    <!-- 3. EXPANDABLE LOVE LETTER CONTAINER -->
-    <section class="mb-12">
-      <div class="text-center mb-6">
-        <span class="glass-pill px-3 py-1 rounded-full text-xs text-dustypink-300 tracking-wider uppercase inline-flex items-center gap-1.5 border border-dustypink-300/20">
-          <i data-lucide="heart" class="w-3 h-3 fill-dustypink-300"></i>
-          A Personal Message
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-slate-100 mt-2 font-normal">Interactive Love Letter</h2>
-      </div>
+        <!-- Lock Header -->
+        <h2
+          class="text-3xl sm:text-4xl font-serif text-center font-normal tracking-wide text-slate-100 mb-1"
+        >
+          Love Letter Vault
+        </h2>
+        <p
+          class="text-slate-400 text-xs tracking-wider uppercase mb-8 font-light"
+        >
+          Enter Passcode To Unlock Message
+        </p>
 
-      <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative">
-        
-        <!-- Closed View Envelope -->
-        <div id="closed-letter-view" class="flex flex-col items-center justify-center py-10 text-center cursor-pointer group" onclick="openLoveLetter()">
-          <div class="relative mb-6">
-            <div class="w-24 h-24 rounded-3xl bg-gradient-to-tr from-dustypink-500 via-dustypink-400 to-lavender-400 flex items-center justify-center shadow-2xl group-hover:scale-105 transition-transform duration-300 border border-white/30">
-              <i data-lucide="mail" class="w-12 h-12 text-white stroke-[1.25]"></i>
-            </div>
-            <div class="absolute -bottom-2 -right-2 w-9 h-9 rounded-full bg-dustypink-500 border-2 border-white/40 flex items-center justify-center text-xs text-white font-serif font-bold shadow-md">💌</div>
-          </div>
-          <h3 class="text-2xl font-serif text-slate-100 font-medium mb-2 group-hover:text-dustypink-200 transition-colors">Unseal Love Letter</h3>
-          <p class="text-slate-400 text-xs sm:text-sm font-light max-w-sm mb-6">Click to break the wax seal and reveal your handwritten note.</p>
-          <button class="glass-button px-6 py-2.5 rounded-full text-xs font-medium text-slate-100 flex items-center gap-2">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-dustypink-300"></i>
-            <span>Read Letter</span>
+        <!-- 6 PIN Indicators -->
+        <div class="flex gap-3 mb-6" id="pin-dots">
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+          <div
+            class="w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all"
+          ></div>
+        </div>
+
+        <!-- Error Message Feedback -->
+        <div
+          id="error-message"
+          class="hidden items-center gap-1.5 text-dustypink-300 text-xs mb-4"
+        >
+          <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+          <span>Incorrect Passcode. Try again!</span>
+        </div>
+
+        <!-- Keypad Grid -->
+        <div class="grid grid-cols-3 gap-3 w-full max-w-[280px] mb-6">
+          <button
+            onclick="pressNum('1')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            1
+          </button>
+          <button
+            onclick="pressNum('2')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            2
+          </button>
+          <button
+            onclick="pressNum('3')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            3
+          </button>
+          <button
+            onclick="pressNum('4')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            4
+          </button>
+          <button
+            onclick="pressNum('5')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            5
+          </button>
+          <button
+            onclick="pressNum('6')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            6
+          </button>
+          <button
+            onclick="pressNum('7')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            7
+          </button>
+          <button
+            onclick="pressNum('8')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            8
+          </button>
+          <button
+            onclick="pressNum('9')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            9
+          </button>
+
+          <button
+            onclick="toggleHint()"
+            class="h-14 rounded-2xl glass-card text-slate-400 hover:text-lavender-300 hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center"
+            title="Hint"
+          >
+            <i data-lucide="help-circle" class="w-5 h-5 stroke-[1.5]"></i>
+          </button>
+          <button
+            onclick="pressNum('0')"
+            class="h-14 rounded-2xl glass-card text-lg font-medium text-slate-200 hover:text-white hover:border-sage-300/40 hover:bg-white/10 active:scale-95 transition-all"
+          >
+            0
+          </button>
+          <button
+            onclick="deleteNum()"
+            class="h-14 rounded-2xl glass-card text-slate-400 hover:text-dustypink-300 hover:bg-white/10 active:scale-95 transition-all text-xs font-mono uppercase"
+          >
+            Delete
           </button>
         </div>
 
-        <!-- Open View Letter Text -->
-        <div id="open-letter-view" class="hidden">
-          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 border-b border-white/10">
-            <div class="flex items-center gap-2">
-              <span id="letter-status-dot" class="w-2.5 h-2.5 rounded-full bg-dustypink-300 animate-pulse"></span>
-              <span id="letter-status-text" class="text-xs uppercase tracking-widest text-slate-400 font-medium">Writing letter...</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <button onclick="toggleTypewriterPause()" class="p-2 rounded-xl glass-card text-slate-300 hover:text-white" title="Pause / Play">
-                <i id="typewriter-toggle-icon" data-lucide="pause" class="w-4 h-4"></i>
-              </button>
-              <button onclick="replayTypewriter()" class="p-2 rounded-xl glass-card text-slate-300 hover:text-white" title="Replay">
-                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-              </button>
-              <button onclick="showFullLetterText()" class="px-3 py-1.5 rounded-xl glass-card text-xs text-slate-300 hover:text-white flex items-center gap-1.5">
-                <i data-lucide="eye" class="w-3.5 h-3.5 text-sage-300"></i>
-                <span>Show Full</span>
-              </button>
-            </div>
-          </div>
-
-          <div id="letter-body-container" class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 min-h-[250px] leading-relaxed font-serif text-lg sm:text-xl text-slate-200 whitespace-pre-line shadow-inner"></div>
+        <!-- Hint Box Accordion -->
+        <div
+          id="hint-box"
+          class="hidden w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-center text-xs text-slate-300 mb-4 transition-all"
+        >
+          <p
+            class="flex items-center justify-center gap-1.5 text-lavender-300 mb-1 font-medium"
+          >
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Vault Hint</span>
+          </p>
+          <p id="hint-text" class="text-slate-400 font-light"></p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- 4. REASONS WHY I LOVE YOU GRID -->
-    <section class="mb-12">
-      <div class="text-center mb-8">
-        <span class="glass-pill px-3 py-1 rounded-full text-xs text-lavender-300 tracking-wider uppercase inline-flex items-center gap-1.5 border border-lavender-300/20">
-          <i data-lucide="star" class="w-3 h-3 text-lavender-300"></i>
-          Click Cards To Flip
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-slate-100 mt-2 font-normal">Reasons Why I Love You</h2>
-        <p class="text-slate-400 text-xs sm:text-sm font-light mt-1">A few of the endless reasons you mean the world to me.</p>
-      </div>
-
-      <div id="reasons-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <!-- Dynamically rendered flip cards -->
-      </div>
-    </section>
-
-    <!-- 5. POLAROID PHOTO GALLERY -->
-    <section class="mb-12">
-      <div class="text-center mb-10">
-        <span class="glass-pill px-3 py-1 rounded-full text-xs text-sage-300 tracking-wider uppercase inline-flex items-center gap-1.5 border border-sage-300/20">
-          <i data-lucide="camera" class="w-3.5 h-3.5 text-sage-300"></i>
-          Captured Memories
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-slate-100 mt-2 font-normal">Floating Polaroid Gallery</h2>
-        <p class="text-slate-400 text-xs sm:text-sm font-light mt-1">Click any polaroid frame to view memory details.</p>
-      </div>
-
-      <div id="polaroids-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Dynamically rendered polaroid frames -->
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-6 text-xs text-slate-500 font-light tracking-wide">
-      Crafted with love & devotion • Happy Girlfriend's Day
-    </footer>
-  </div>
-
-  <!-- ========================================== -->
-  <!-- 🖼️ LIGHTBOX MODAL FOR POLAROID PREVIEW -->
-  <!-- ========================================== -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-darkbg/90 backdrop-blur-xl">
-    <div class="w-full max-w-2xl glass-panel rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl relative">
-      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-900/60 text-slate-300 hover:text-white transition-colors border border-white/10">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-        <div class="bg-slate-100 rounded-2xl p-3 shadow-xl border border-white/40">
-          <img id="lightbox-img" src="" alt="Polaroid Memory" class="w-full h-auto rounded-xl object-cover aspect-square" />
-        </div>
-        <div class="space-y-4">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-dustypink-300">
-            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-            <span id="lightbox-date">Date</span>
-          </div>
-          <h3 id="lightbox-title" class="text-3xl font-serif text-slate-100 font-medium leading-tight">Title</h3>
-          <p id="lightbox-caption" class="text-sm font-light text-slate-300 leading-relaxed font-serif italic border-l-2 border-dustypink-300/50 pl-4 py-1">"Caption"</p>
-        </div>
+        <!-- Bottom Glowing Accent Line -->
+        <div
+          class="w-24 h-0.5 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-emerald-400 opacity-60 mt-2"
+        ></div>
       </div>
     </div>
-  </div>
 
-  <!-- ========================================== -->
-  <!-- 🎵 MINIMALIST FLOATING AUDIO PLAYER -->
-  <!-- ========================================== -->
-  <div id="audio-player-widget" class="fixed bottom-4 right-4 sm:right-6 z-40 w-[92%] sm:w-80 glass-panel rounded-2xl p-3 border border-white/15 shadow-2xl backdrop-blur-xl">
-    <!-- HTML Audio element targeting music.mp3 -->
-    <audio id="bg-audio" src="music.mp3" preload="auto" loop></audio>
+    <!-- ========================================== -->
+    <!-- 💌 MAIN WEBSITE CONTENT CONTAINER -->
+    <!-- ========================================== -->
+    <div
+      id="main-content"
+      class="relative z-10 max-w-5xl mx-auto px-4 py-8 opacity-0 scale-95 transition-all duration-1000 pointer-events-none pb-28"
+    >
+      <!-- 1. HEADER SECTION -->
+      <header class="flex flex-col items-center text-center pt-8 pb-10">
+        <h1
+          id="header-title"
+          class="text-4xl sm:text-6xl md:text-7xl font-serif text-slate-100 font-normal tracking-tight leading-tight mb-4"
+        >
+          Happy 2nd Girlfriends Day
+        </h1>
 
-    <div class="flex items-center justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sage-300/30 via-lavender-300/30 to-dustypink-300/30 flex items-center justify-center border border-white/20">
-          <i data-lucide="disc" id="music-disc-icon" class="w-5 h-5 text-dustypink-300"></i>
-        </div>
-        <div>
-          <h4 class="text-xs font-medium text-slate-100 truncate">Golden Hour Serenade</h4>
-          <p class="text-[10px] text-slate-400">Background Music • music.mp3</p>
-        </div>
-      </div>
+        <!-- Glowing Gradient Accent Line -->
+        <div
+          class="h-1 w-28 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-emerald-400 mb-6 shadow-md opacity-80"
+        ></div>
 
-      <div class="flex items-center gap-2">
-        <button onclick="toggleAudio()" class="w-9 h-9 rounded-xl bg-gradient-to-r from-sage-300/30 via-lavender-300/30 to-dustypink-300/30 border border-white/30 flex items-center justify-center text-white hover:scale-105 active:scale-95 transition-transform shadow-md">
-          <i id="play-pause-icon" data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i>
+        <button
+          onclick="relockVault()"
+          class="glass-card px-3.5 py-2 rounded-xl text-xs text-slate-300 hover:text-white flex items-center gap-2 transition-all hover:bg-white/10 hover:border-pink-300/40"
+        >
+          <i
+            data-lucide="lock"
+            class="w-3.5 h-3.5 text-pink-300 stroke-[1.5]"
+          ></i>
+          <span>Lock Vault</span>
         </button>
+      </header>
+
+      <!-- 3. LOVE LETTER CONTAINER -->
+      <section class="mb-12 max-w-md sm:max-w-lg md:max-w-xl mx-auto">
+        <div
+          class="glass-panel rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative"
+        >
+          <!-- Closed View Envelope -->
+          <div
+            id="closed-letter-view"
+            class="flex flex-col items-center justify-center py-10 text-center cursor-pointer group"
+            onclick="openLoveLetter()"
+          >
+            <div class="relative mb-6">
+              <div
+                class="w-24 h-24 rounded-3xl bg-gradient-to-tr from-pink-500 via-purple-500 to-emerald-400 flex items-center justify-center shadow-2xl group-hover:scale-105 transition-transform duration-300 border border-white/40 glow-tri"
+              >
+                <i
+                  data-lucide="mail"
+                  class="w-12 h-12 text-white stroke-[1.25]"
+                ></i>
+              </div>
+              <div
+                class="absolute -bottom-2 -right-2 w-9 h-9 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 border-2 border-white/40 flex items-center justify-center text-xs text-white font-serif font-bold shadow-md"
+              >
+                💌
+              </div>
+            </div>
+            <button
+              class="glass-button px-6 py-2.5 rounded-full text-xs font-medium text-slate-100 flex items-center gap-2"
+            >
+              <i
+                data-lucide="sparkles"
+                class="w-3.5 h-3.5 text-emerald-300"
+              ></i>
+              <span>Read Letter</span>
+            </button>
+          </div>
+
+          <!-- Open View Letter Text -->
+          <div id="open-letter-view" class="hidden">
+            <div
+              class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 border-b border-white/10"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  id="letter-status-dot"
+                  class="w-2.5 h-2.5 rounded-full bg-pink-400 animate-pulse"
+                ></span>
+                <span
+                  id="letter-status-text"
+                  class="text-xs uppercase tracking-widest text-slate-400 font-medium"
+                  >Writing letter...</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <button
+                  onclick="toggleTypewriterPause()"
+                  class="p-2 rounded-xl glass-card text-slate-300 hover:text-white"
+                  title="Pause / Play"
+                >
+                  <i
+                    id="typewriter-toggle-icon"
+                    data-lucide="pause"
+                    class="w-4 h-4"
+                  ></i>
+                </button>
+                <button
+                  onclick="replayTypewriter()"
+                  class="p-2 rounded-xl glass-card text-slate-300 hover:text-white"
+                  title="Replay"
+                >
+                  <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                </button>
+                <button
+                  onclick="showFullLetterText()"
+                  class="px-3 py-1.5 rounded-xl glass-card text-xs text-slate-300 hover:text-white flex items-center gap-1.5"
+                >
+                  <i data-lucide="eye" class="w-3.5 h-3.5 text-emerald-300"></i>
+                  <span>Show Full</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="letter-body-container"
+              class="bg-white/[0.03] border border-white/10 rounded-2xl p-6 sm:p-8 min-h-[250px] leading-relaxed font-serif text-lg sm:text-xl text-slate-200 whitespace-pre-line shadow-inner"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 🎵 MINIMALIST FLOATING AUDIO PLAYER -->
+    <!-- ========================================== -->
+    <div
+      id="audio-player-widget"
+      class="fixed bottom-4 right-4 sm:right-6 z-40 w-[92%] sm:w-80 glass-panel rounded-2xl p-3 border border-white/15 shadow-2xl backdrop-blur-xl glow-tri"
+    >
+      <!-- HTML Audio element targeting Aphrodite - The Ridleys -->
+      <audio
+        id="bg-audio"
+        src="music/Aphrodite - The Ridleys (Lyrics).mp3"
+        preload="auto"
+        loop
+      ></audio>
+
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500/30 via-purple-500/30 to-emerald-400/30 flex items-center justify-center border border-white/30"
+          >
+            <i
+              data-lucide="disc"
+              id="music-disc-icon"
+              class="w-5 h-5 text-pink-200"
+            ></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-serif font-medium text-slate-100 truncate">
+              Aphrodite
+            </h4>
+            <p class="text-[10px] text-slate-400">
+              The Ridleys • Background Music
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="play-pause-btn"
+            onclick="toggleAudio()"
+            class="w-9 h-9 rounded-xl bg-gradient-to-r from-pink-500 via-purple-500 to-emerald-400 border border-white/40 flex items-center justify-center text-white hover:scale-105 active:scale-95 transition-transform shadow-md"
+            title="Play/Pause"
+          >
+            <i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ========================================== -->
-  <!-- ⚙️ JAVASCRIPT LOGIC & CONFIGURATION -->
-  <!-- ========================================== -->
-  <script>
-    /* -------------------------------------------------------------
+    <!-- ========================================== -->
+    <!-- ⚙️ JAVASCRIPT LOGIC & CONFIGURATION -->
+    <!-- ========================================== -->
+    <script>
+      /* -------------------------------------------------------------
        CUSTOMIZABLE CONFIGURATION VARIABLES
     ------------------------------------------------------------- */
-    const CORRECT_PIN = "071525";
-    const START_DATE = "2025-07-15T00:00:00";
-    const HINT_TEXT = "Hint: Our special date (MMDDYY)";
-    const LETTER_TITLE = "For My Dearest";
-    const LETTER_CONTENT = `My Dearest,
+      const CORRECT_PIN = "071525";
+      const HINT_TEXT = "Hint: Our special date (MMDDYY)";
+      const LETTER_TITLE = "Happy 2nd Girlfriends Day";
+      const LETTER_CONTENT = `Hello mahal, sa pinaka magandang girlfriend sa balat ng lupa, happy girlfriends day po, alam mo po hindi kalang po basta girlfriend e, you're my asawa, you're my partner in life, my partner in everything, kaya laking pasalamat ko at dumating ka sa'kin, basta po nag-iba ako kumapara dati nailabas mo kung sino ako at syempre nilabasan rin ako sayo hehehe, basta mahal lagi mo tatandaan na proud na proud ako sayo sa lahat ng ginagawa mo, you're so brave and strong woman na magiging nanay ng mga anak natin kapag pinagkalooban po tayo, basta idol po kita mahal sa kung ano ang kaya mong mga gawin, daig mo pa nga ako e, kaya masasabe ko mas magaling ka sa'kin, super proud na proud bf here hehe, basta po andito lang ako lagi sa tabi mo, kasama mo sa lahat ng pagdadaanan mo you're my special someone my favorite girl, my baby girl, my everything, hindi ko man kaya ibigay sayo ang lahat ngayon, mahal na mahal naman po kita super pa sa super, kiss at mga yakap po ang nais, hirap mahiwalay sayo, i love you much lovelove ko, muuuaaahhh. 💍💜😚♾️♾️😚💜💍`;
 
-Happy Girlfriend's Day!
-
-From the very first moment our paths crossed on July 15th, my world felt warmer, brighter, and infinitely more meaningful. You have an incredible way of bringing peace into my busiest days and genuine laughter into quiet moments.
-
-Thank you for being my anchor, my favorite conversation, and my gentlest comfort. Every shared smile, late-night talk, and simple moment together has built a tapestry of memories I cherish deeply.
-
-On this special day, I want you to know how immensely grateful I am for your presence in my life. Loving you is the easiest, sweetest thing I have ever known.
-
-Forever & Always.`;
-
-    const REASONS = [
-      { title: "Your Kind Heart", description: "The way you treat everyone around you with gentle empathy and unconditional warmth.", icon: "heart", color: "text-dustypink-300" },
-      { title: "Your Bright Smile", description: "Whenever you smile, the room lights up and every hard day simply melts away.", icon: "sun", color: "text-sage-300" },
-      { title: "Our Quiet Conversations", description: "The late-night talks where time stands still and we share our deepest dreams.", icon: "message-circle", color: "text-lavender-300" },
-      { title: "Your Gentle Grace", description: "The quiet strength, poise, and elegance you bring into everything you do.", icon: "feather", color: "text-dustypink-300" },
-      { title: "My Safe Sanctuary", description: "Being in your arms feels like home—a place of total comfort, peace, and belonging.", icon: "shield", color: "text-sage-300" },
-      { title: "Endless Shared Laughter", description: "The inside jokes and spontaneous laughs that make life feel so joyful.", icon: "sparkles", color: "text-lavender-300" }
-    ];
-
-    const PHOTOS = [
-      { url: "photos/coffee.png", title: "Morning Coffee Date", date: "Autumn Afternoon", caption: "Quiet morning moments with warm ceramic cups and sweet conversations." },
-      { url: "photos/sunset.png", title: "Golden Hour Walk", date: "Golden Sunset Memory", caption: "Walking hand in hand as the waves softly touch the shore." },
-      { url: "photos/flowers.png", title: "Pastel Flower Bouquet", date: "Just Because", caption: "Soft pink roses and fresh eucalyptus to remind you how loved you are." },
-      { url: "photos/stargazing.png", title: "Under the Night Sky", date: "Midnight Stargazing", caption: "Sitting together under an endless starry sky, dreaming of tomorrow." }
-    ];
-
-    /* -------------------------------------------------------------
+      /* -------------------------------------------------------------
        STATE MANAGEMENT & INITIALIZATION
     ------------------------------------------------------------- */
-    let currentPin = "";
-    let typewriterTimer = null;
-    let typingIndex = 0;
-    let isTyping = false;
-    let isAudioPlaying = false;
-    let audioContext = null;
+      let currentPin = "";
+      let typewriterTimer = null;
+      let typingIndex = 0;
+      let isTyping = false;
+      let isAudioPlaying = false;
+      let audioContext = null;
 
-    document.addEventListener("DOMContentLoaded", () => {
-      // Initialize Lucide icons
-      lucide.createIcons();
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize Lucide icons
+        lucide.createIcons();
 
-      // Populate Hint Text
-      document.getElementById("hint-text").innerText = HINT_TEXT;
-      document.getElementById("header-title").innerText = LETTER_TITLE;
+        // Populate Hint Text
+        document.getElementById("hint-text").innerText = HINT_TEXT;
+        document.getElementById("header-title").innerText = LETTER_TITLE;
 
-      // Render Reasons Flip Cards & Polaroids
-      renderReasons();
-      renderPolaroids();
-
-      // Start Live Timer
-      startLiveCounter();
-    });
-
-    /* -------------------------------------------------------------
-       1. LOCK SCREEN LOGIC
-    ------------------------------------------------------------- */
-    function pressNum(num) {
-      if (currentPin.length < 6) {
-        currentPin += num;
-        updatePinDots();
-        document.getElementById("error-message").classList.add("hidden");
-
-        if (currentPin.length === 6) {
-          verifyPin();
-        }
-      }
-    }
-
-    function deleteNum() {
-      currentPin = currentPin.slice(0, -1);
-      updatePinDots();
-      document.getElementById("error-message").classList.add("hidden");
-    }
-
-    function updatePinDots() {
-      const dots = document.querySelectorAll("#pin-dots div");
-      dots.forEach((dot, index) => {
-        if (index < currentPin.length) {
-          dot.className = "w-4 h-4 rounded-full border border-white/80 bg-dustypink-300 shadow-[0_0_12px_rgba(232,180,180,0.6)] scale-110 transition-all";
-        } else {
-          dot.className = "w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all";
+        // Audio Event Listeners for icon syncing
+        const audioEl = document.getElementById("bg-audio");
+        if (audioEl) {
+          audioEl.onplay = () => updateAudioUI(true);
+          audioEl.onpause = () => updateAudioUI(false);
         }
       });
-    }
 
-    function verifyPin() {
-      if (currentPin === CORRECT_PIN) {
-        unlockVault();
-      } else {
-        const card = document.getElementById("lock-card");
-        const errMsg = document.getElementById("error-message");
-        card.classList.add("animate-shake");
-        errMsg.classList.remove("hidden");
-        errMsg.classList.add("flex");
-
-        setTimeout(() => {
-          card.classList.remove("animate-shake");
-          currentPin = "";
-          updatePinDots();
-        }, 600);
-      }
-    }
-
-    function toggleHint() {
-      const hintBox = document.getElementById("hint-box");
-      hintBox.classList.toggle("hidden");
-    }
-
-    function quickUnlock() {
-      currentPin = CORRECT_PIN;
-      updatePinDots();
-      unlockVault();
-    }
-
-    function unlockVault() {
-      const lockScreen = document.getElementById("lock-screen");
-      const mainContent = document.getElementById("main-content");
-
-      playChime();
-
-      lockScreen.classList.add("opacity-0", "scale-105", "pointer-events-none");
-      setTimeout(() => {
-        lockScreen.classList.add("hidden");
-        mainContent.classList.remove("opacity-0", "scale-95", "pointer-events-none");
-        mainContent.classList.add("opacity-100", "scale-100");
-      }, 700);
-    }
-
-    function relockVault() {
-      const lockScreen = document.getElementById("lock-screen");
-      const mainContent = document.getElementById("main-content");
-
-      currentPin = "";
-      updatePinDots();
-
-      mainContent.classList.add("opacity-0", "scale-95", "pointer-events-none");
-      lockScreen.classList.remove("hidden");
-      setTimeout(() => {
-        lockScreen.classList.remove("opacity-0", "scale-105", "pointer-events-none");
-      }, 50);
-    }
-
-    function playChime() {
-      try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = "sine";
-        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(1046.50, ctx.currentTime + 0.3);
-
-        gain.gain.setValueAtTime(0.15, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start();
-        osc.stop(ctx.currentTime + 0.4);
-      } catch (e) {}
-    }
-
-    /* -------------------------------------------------------------
-       2. LIVE TIME COUNTER LOGIC
+      /* -------------------------------------------------------------
+       1. LOCK SCREEN LOGIC
     ------------------------------------------------------------- */
-    function startLiveCounter() {
-      const startDateObj = new Date(START_DATE);
+      function pressNum(num) {
+        if (currentPin.length < 6) {
+          currentPin += num;
+          updatePinDots();
+          document.getElementById("error-message").classList.add("hidden");
 
-      document.getElementById("counter-start-label").innerText = `Counting every heartbeat since ${startDateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
-
-      function updateCounter() {
-        const now = new Date();
-        const diffMs = Math.max(0, now - startDateObj);
-
-        const secondsTotal = Math.floor(diffMs / 1000);
-        const minutesTotal = Math.floor(secondsTotal / 60);
-        const hoursTotal = Math.floor(minutesTotal / 60);
-        const daysTotal = Math.floor(hoursTotal / 24);
-
-        const hours = hoursTotal % 24;
-        const minutes = minutesTotal % 60;
-        const seconds = secondsTotal % 60;
-
-        document.getElementById("timer-days").innerText = String(daysTotal).padStart(2, '0');
-        document.getElementById("timer-hours").innerText = String(hours).padStart(2, '0');
-        document.getElementById("timer-minutes").innerText = String(minutes).padStart(2, '0');
-        document.getElementById("timer-seconds").innerText = String(seconds).padStart(2, '0');
-        document.getElementById("total-days-label").innerText = `${daysTotal} Total Days of Love`;
+          if (currentPin.length === 6) {
+            verifyPin();
+          }
+        }
       }
 
-      updateCounter();
-      setInterval(updateCounter, 1000);
-    }
+      function deleteNum() {
+        currentPin = currentPin.slice(0, -1);
+        updatePinDots();
+        document.getElementById("error-message").classList.add("hidden");
+      }
 
-    /* -------------------------------------------------------------
+      function updatePinDots() {
+        const dots = document.querySelectorAll("#pin-dots div");
+        dots.forEach((dot, index) => {
+          if (index < currentPin.length) {
+            dot.className =
+              "w-4 h-4 rounded-full border border-white/80 bg-dustypink-300 shadow-[0_0_12px_rgba(232,180,180,0.6)] scale-110 transition-all";
+          } else {
+            dot.className =
+              "w-4 h-4 rounded-full border border-white/20 bg-white/5 transition-all";
+          }
+        });
+      }
+
+      function verifyPin() {
+        if (currentPin === CORRECT_PIN) {
+          unlockVault();
+        } else {
+          const card = document.getElementById("lock-card");
+          const errMsg = document.getElementById("error-message");
+          card.classList.add("animate-shake");
+          errMsg.classList.remove("hidden");
+          errMsg.classList.add("flex");
+
+          setTimeout(() => {
+            card.classList.remove("animate-shake");
+            currentPin = "";
+            updatePinDots();
+          }, 600);
+        }
+      }
+
+      function toggleHint() {
+        const hintBox = document.getElementById("hint-box");
+        hintBox.classList.toggle("hidden");
+      }
+
+      function unlockVault() {
+        const lockScreen = document.getElementById("lock-screen");
+        const mainContent = document.getElementById("main-content");
+
+        playChime();
+        playAudio();
+
+        lockScreen.classList.add(
+          "opacity-0",
+          "scale-105",
+          "pointer-events-none",
+        );
+        setTimeout(() => {
+          lockScreen.classList.add("hidden");
+          mainContent.classList.remove(
+            "opacity-0",
+            "scale-95",
+            "pointer-events-none",
+          );
+          mainContent.classList.add("opacity-100", "scale-100");
+        }, 700);
+      }
+
+      function relockVault() {
+        const lockScreen = document.getElementById("lock-screen");
+        const mainContent = document.getElementById("main-content");
+
+        currentPin = "";
+        updatePinDots();
+
+        mainContent.classList.add(
+          "opacity-0",
+          "scale-95",
+          "pointer-events-none",
+        );
+        lockScreen.classList.remove("hidden");
+        setTimeout(() => {
+          lockScreen.classList.remove(
+            "opacity-0",
+            "scale-105",
+            "pointer-events-none",
+          );
+        }, 50);
+      }
+
+      function playChime() {
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          const ctx = new AudioCtx();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(
+            1046.5,
+            ctx.currentTime + 0.3,
+          );
+
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start();
+          osc.stop(ctx.currentTime + 0.4);
+        } catch (e) {}
+      }
+
+      /* -------------------------------------------------------------
        3. LOVE LETTER TYPEWRITER LOGIC
     ------------------------------------------------------------- */
-    function openLoveLetter() {
-      document.getElementById("closed-letter-view").classList.add("hidden");
-      document.getElementById("open-letter-view").classList.remove("hidden");
-      startTypewriter();
-    }
+      function openLoveLetter() {
+        document.getElementById("closed-letter-view").classList.add("hidden");
+        document.getElementById("open-letter-view").classList.remove("hidden");
+        startTypewriter();
+      }
 
-    function startTypewriter() {
-      const bodyContainer = document.getElementById("letter-body-container");
-      isTyping = true;
-      typingIndex = 0;
-      bodyContainer.innerText = "";
-      document.getElementById("letter-status-text").innerText = "Writing letter...";
-
-      clearInterval(typewriterTimer);
-      typewriterTimer = setInterval(() => {
-        if (typingIndex < LETTER_CONTENT.length) {
-          bodyContainer.innerText = LETTER_CONTENT.slice(0, typingIndex + 1);
-          typingIndex++;
-        } else {
-          clearInterval(typewriterTimer);
-          isTyping = false;
-          document.getElementById("letter-status-text").innerText = "Read Complete";
-        }
-      }, 28);
-    }
-
-    function toggleTypewriterPause() {
-      const toggleIcon = document.getElementById("typewriter-toggle-icon");
-      if (isTyping) {
-        clearInterval(typewriterTimer);
-        isTyping = false;
-        document.getElementById("letter-status-text").innerText = "Paused";
-        toggleIcon.setAttribute("data-lucide", "play");
-      } else if (typingIndex < LETTER_CONTENT.length) {
+      function startTypewriter() {
+        const bodyContainer = document.getElementById("letter-body-container");
         isTyping = true;
-        document.getElementById("letter-status-text").innerText = "Writing letter...";
-        toggleIcon.setAttribute("data-lucide", "pause");
+        typingIndex = 0;
+        bodyContainer.innerText = "";
+        document.getElementById("letter-status-text").innerText =
+          "Writing letter...";
+
+        clearInterval(typewriterTimer);
         typewriterTimer = setInterval(() => {
           if (typingIndex < LETTER_CONTENT.length) {
-            document.getElementById("letter-body-container").innerText = LETTER_CONTENT.slice(0, typingIndex + 1);
+            bodyContainer.innerText = LETTER_CONTENT.slice(0, typingIndex + 1);
             typingIndex++;
           } else {
             clearInterval(typewriterTimer);
             isTyping = false;
-            document.getElementById("letter-status-text").innerText = "Read Complete";
+            document.getElementById("letter-status-text").innerText =
+              "Read Complete";
           }
         }, 28);
       }
-      lucide.createIcons();
-    }
 
-    function replayTypewriter() {
-      clearInterval(typewriterTimer);
-      startTypewriter();
-    }
-
-    function showFullLetterText() {
-      clearInterval(typewriterTimer);
-      isTyping = false;
-      typingIndex = LETTER_CONTENT.length;
-      document.getElementById("letter-body-container").innerText = LETTER_CONTENT;
-      document.getElementById("letter-status-text").innerText = "Read Complete";
-    }
-
-    /* -------------------------------------------------------------
-       4. REASONS WHY 3D FLIP CARDS LOGIC
-    ------------------------------------------------------------- */
-    function renderReasons() {
-      const grid = document.getElementById("reasons-grid");
-      grid.innerHTML = "";
-
-      REASONS.forEach((reason, index) => {
-        const cardHtml = `
-          <div class="h-52 perspective-1000 cursor-pointer group" onclick="flipCard(this)">
-            <div class="relative w-full h-full duration-700 transform-style-3d transition-transform card-flipper">
-              <!-- Front -->
-              <div class="absolute inset-0 w-full h-full glass-card rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-white/10 group-hover:border-white/20 backface-hidden shadow-lg">
-                <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 mb-3 ${reason.color}">
-                  <i data-lucide="${reason.icon}" class="w-6 h-6 stroke-[1.5]"></i>
-                </div>
-                <h3 class="text-xl font-serif text-slate-100 font-medium mb-1">${reason.title}</h3>
-                <span class="text-[11px] text-slate-400 font-light tracking-wide uppercase mt-2">Click to flip</span>
-              </div>
-              <!-- Back -->
-              <div class="absolute inset-0 w-full h-full glass-card bg-slate-900/90 rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-dustypink-300/30 rotate-y-180 backface-hidden shadow-xl">
-                <i data-lucide="sparkles" class="w-4 h-4 mb-2 ${reason.color}"></i>
-                <p class="text-sm font-light text-slate-200 leading-relaxed font-serif">"${reason.description}"</p>
-                <span class="text-[10px] text-slate-400 tracking-widest uppercase mt-3">Tap to turn back</span>
-              </div>
-            </div>
-          </div>
-        `;
-        grid.innerHTML += cardHtml;
-      });
-      lucide.createIcons();
-    }
-
-    function flipCard(element) {
-      const flipper = element.querySelector('.card-flipper');
-      flipper.classList.toggle('rotate-y-180');
-    }
-
-    /* -------------------------------------------------------------
-       5. POLAROID GALLERY LOGIC
-    ------------------------------------------------------------- */
-    function renderPolaroids() {
-      const grid = document.getElementById("polaroids-grid");
-      grid.innerHTML = "";
-
-      const rotations = ['-rotate-2', 'rotate-3', '-rotate-1', 'rotate-2'];
-
-      PHOTOS.forEach((photo, index) => {
-        const rot = rotations[index % rotations.length];
-        const cardHtml = `
-          <div class="cursor-pointer transition-all duration-300 hover:scale-105 hover:rotate-0 hover:z-30 ${rot}" onclick="openLightbox(${index})">
-            <div class="bg-slate-100 text-slate-800 rounded-lg p-3 shadow-2xl border border-white/20 relative group overflow-hidden">
-              <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-amber-100/50 backdrop-blur-sm border border-amber-200/40 rotate-1 z-10 pointer-events-none shadow-sm"></div>
-              <div class="relative aspect-square rounded-sm overflow-hidden bg-slate-900 mb-3">
-                <img src="${photo.url}" alt="${photo.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80'" />
-                <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div class="p-2.5 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/40">
-                    <i data-lucide="maximize-2" class="w-5 h-5"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="px-1 pb-1">
-                <h4 class="font-serif font-bold text-slate-800 text-lg leading-snug">${photo.title}</h4>
-                <p class="text-[11px] font-sans text-slate-500 font-medium mb-1">${photo.date}</p>
-                <p class="text-xs font-serif italic text-slate-600 line-clamp-2 leading-relaxed">"${photo.caption}"</p>
-              </div>
-            </div>
-          </div>
-        `;
-        grid.innerHTML += cardHtml;
-      });
-      lucide.createIcons();
-    }
-
-    function openLightbox(index) {
-      const photo = PHOTOS[index];
-      document.getElementById("lightbox-img").src = photo.url;
-      document.getElementById("lightbox-title").innerText = photo.title;
-      document.getElementById("lightbox-date").innerText = photo.date;
-      document.getElementById("lightbox-caption").innerText = `"${photo.caption}"`;
-
-      const modal = document.getElementById("lightbox-modal");
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    }
-
-    function closeLightbox() {
-      const modal = document.getElementById("lightbox-modal");
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-    }
-
-    /* -------------------------------------------------------------
-       6. MINIMALIST AUDIO PLAYER LOGIC
-    ------------------------------------------------------------- */
-    function toggleAudio() {
-      const audioEl = document.getElementById("bg-audio");
-      const playIcon = document.getElementById("play-pause-icon");
-      const discIcon = document.getElementById("music-disc-icon");
-
-      if (isAudioPlaying) {
-        audioEl.pause();
-        stopSynthMusic();
-        isAudioPlaying = false;
-        playIcon.setAttribute("data-lucide", "play");
-        discIcon.classList.remove("animate-spin");
-      } else {
-        audioEl.play().then(() => {
-          isAudioPlaying = true;
-          playIcon.setAttribute("data-lucide", "pause");
-          discIcon.classList.add("animate-spin");
-        }).catch((err) => {
-          // Fallback to Web Audio Ambient Synth if music.mp3 is not present locally
-          startSynthMusic();
-          isAudioPlaying = true;
-          playIcon.setAttribute("data-lucide", "pause");
-          discIcon.classList.add("animate-spin");
-        });
-      }
-      lucide.createIcons();
-    }
-
-    function startSynthMusic() {
-      try {
-        if (!audioContext) {
-          const AudioCtx = window.AudioContext || window.webkitAudioContext;
-          audioContext = new AudioCtx();
+      function toggleTypewriterPause() {
+        const toggleIcon = document.getElementById("typewriter-toggle-icon");
+        if (isTyping) {
+          clearInterval(typewriterTimer);
+          isTyping = false;
+          document.getElementById("letter-status-text").innerText = "Paused";
+          toggleIcon.setAttribute("data-lucide", "play");
+        } else if (typingIndex < LETTER_CONTENT.length) {
+          isTyping = true;
+          document.getElementById("letter-status-text").innerText =
+            "Writing letter...";
+          toggleIcon.setAttribute("data-lucide", "pause");
+          typewriterTimer = setInterval(() => {
+            if (typingIndex < LETTER_CONTENT.length) {
+              document.getElementById("letter-body-container").innerText =
+                LETTER_CONTENT.slice(0, typingIndex + 1);
+              typingIndex++;
+            } else {
+              clearInterval(typewriterTimer);
+              isTyping = false;
+              document.getElementById("letter-status-text").innerText =
+                "Read Complete";
+            }
+          }, 28);
         }
-        if (audioContext.state === "suspended") {
-          audioContext.resume();
-        }
-      } catch (e) {}
-    }
-
-    function stopSynthMusic() {
-      if (audioContext && audioContext.state === "running") {
-        audioContext.suspend();
+        lucide.createIcons();
       }
-    }
-  </script>
-</body>
+
+      function replayTypewriter() {
+        clearInterval(typewriterTimer);
+        startTypewriter();
+      }
+
+      function showFullLetterText() {
+        clearInterval(typewriterTimer);
+        isTyping = false;
+        typingIndex = LETTER_CONTENT.length;
+        document.getElementById("letter-body-container").innerText =
+          LETTER_CONTENT;
+        document.getElementById("letter-status-text").innerText =
+          "Read Complete";
+      }
+
+      /* -------------------------------------------------------------
+       5. MINIMALIST AUDIO PLAYER LOGIC
+    ------------------------------------------------------------- */
+      function updateAudioUI(playing) {
+        isAudioPlaying = playing;
+        const btn = document.getElementById("play-pause-btn");
+        const discIcon = document.getElementById("music-disc-icon");
+        if (btn) {
+          btn.innerHTML = playing
+            ? `<i data-lucide="pause" class="w-4 h-4 fill-white"></i>`
+            : `<i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i>`;
+        }
+        if (discIcon) {
+          if (playing) discIcon.classList.add("animate-spin");
+          else discIcon.classList.remove("animate-spin");
+        }
+        if (window.lucide) lucide.createIcons();
+      }
+
+      function playAudio() {
+        const audioEl = document.getElementById("bg-audio");
+        if (audioEl) {
+          audioEl
+            .play()
+            .then(() => {
+              updateAudioUI(true);
+            })
+            .catch((err) => {
+              console.log("Autoplay deferred:", err);
+            });
+        }
+      }
+
+      function toggleAudio() {
+        const audioEl = document.getElementById("bg-audio");
+        if (!audioEl) return;
+        if (audioEl.paused) {
+          audioEl
+            .play()
+            .then(() => {
+              updateAudioUI(true);
+            })
+            .catch((err) => console.error(err));
+        } else {
+          audioEl.pause();
+          updateAudioUI(false);
+        }
+      }
+
+      function startSynthMusic() {
+        try {
+          if (!audioContext) {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            audioContext = new AudioCtx();
+          }
+          if (audioContext.state === "suspended") {
+            audioContext.resume();
+          }
+        } catch (e) {}
+      }
+
+      function stopSynthMusic() {
+        if (audioContext && audioContext.state === "running") {
+          audioContext.suspend();
+        }
+      }
+    </script>
+  </body>
 </html>
